@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3.3-jdk-8 '
-    }
-
-  }
+  agent none
   stages {
     stage('Build') {
       agent {
@@ -15,7 +10,6 @@ pipeline {
       }
       steps {
         echo 'Hello H r u from my first Jenkins build'
-        sh 'mvn clean'
       }
     }
   }
